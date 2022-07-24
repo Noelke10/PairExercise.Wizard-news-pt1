@@ -42,7 +42,7 @@ app.get("/", (req, res) => {
   res.send(html);
 });
 
-app.get("posts/:id", (req, res, next) => {
+app.get("/posts/:id", (req, res, next) => {
   const id = req.params.id;
   const post = postBank.find(id);
   if (!post.id) {
