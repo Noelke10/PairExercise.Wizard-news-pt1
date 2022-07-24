@@ -80,7 +80,7 @@ app.use((err, req, res, next) => {
   res.status(404).send("NOT_FOUND");
 });
 
-const PORT = 1337;
+const { PORT = 1337 } = process.env;
 
 app.listen(PORT, () => {
   console.log(`App listening in port ${PORT}`);
